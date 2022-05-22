@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color:white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #38444d;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .Menu:hover .dropbtn {
+  background-color: red;
+}
+
+li.Menu {
+  display: inline-block;
+}
+
+.Menu-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.Menu-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.Menu-content a:hover {background-color: #f1f1f1;}
+
+.Menu:hover .Menu-content {
+  display: block;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.h2{
+  text-align: center;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="main.html">Home</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li class="Menu">
+    <a href="javascript:void(0)" class="dropbtn">Menu</a>
+    <div class="Menu-content">
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      
+    </div>
+
+  </li>
+ 
+</ul>
+
+<h2>Contact Us</h2>
+
+<div>
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="lname">Email</label>
+    <input type="text" id="lname" name="Email" placeholder="Your Email..">
+
+    <label for="lname">Questions</label>
+    <input type="text" id="lname" name="Questions" >
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Albania</option>
+      <option value="australia">Australia</option>
+      <option value="australia">Belgium</option>
+      <option value="australia">Canada</option>
+      <option value="canada">France</option>
+      <option value="canada">Spain</option>
+      <option value="canada">Sweden</option>
+      <option value="usa">USA</option>
+      <option value="canada">Non of the above</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #38444d;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .Menu:hover .dropbtn {
+  background-color: red;
+}
+
+li.Menu {
+  display: inline-block;
+}
+
+.Menu-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.Menu-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.Menu-content a:hover {background-color: #f1f1f1;}
+
+.Menu:hover .Menu-content {
+  display: block;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("cv.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+
+
+
+
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+}
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+
+    /*other styles*/
+    
+}
+
+h1 {
+    color: var(--secondary-color);
+
+    /*other styles*/
+}
+
+a {
+    color: var(--primary-color);
+
+    /*other styles*/
+    
+}
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left:4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #b7d6b9;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.p{
+  color:black;
+}
+
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li class="Menu">
+    <a href="javascript:void(0)" class="dropbtn">Menu</a>
+    <div class="Menu-content">
+       <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  
+</ul>
+<div class="theme-switch-wrapper">
+  <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+</label>
+<em>Enable Dark Mode!</em>
+<script>
+
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+function switchTheme(e) {
+  if (e.target.checked) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  else {
+      document.documentElement.setAttribute('data-theme', 'light');
+  }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+function switchTheme(e) {
+  if (e.target.checked) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark'); //add this
+  }
+  else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light'); //add this
+  }    
+}
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (currentTheme === 'dark') {
+      toggleSwitch.checked = true;
+  }
+}
+
+</script>
+</div>
+<br>
+
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">Welcome to our Website</h1>
+    <p>....</p>
+         <a href="about.html"><button>About Us</button></a>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>COVID-19 vaccines</h2>
+      <h5> Dec 7, 2021</h5>
+      <div class="" style="height:200px;">
+       <img src="cv.jpg" height="200px" width="100%">
+      </div>
+      <p></p>
+      <p>Equitable access to safe and effective vaccines is critical to ending the COVID-19 pandemic, so it is hugely encouraging to see so many vaccines proving and going into development.
+         WHO is working tirelessly with partners to develop, manufacture and deploy safe and effective vaccines. </p>
+    </div>
+    <div class="card">
+      <h2>How do vaccines work?</h2>
+      <h5>30 June 2022</h5>
+      <div class="" style="height:200px;">
+       <img src="https://vaccination-info.eu/sites/default/files/styles/is_large/public/images/How-vaccine-works_1.png?itok=cYiMocRM" height="200px" width="100%">
+      </div>
+      <p></p>
+      <p>This article is part of a series of explainers on vaccine development and distribution.
+         Learn more about vaccines – from how they work and how they’re made to ensuring safety and equitable access
+         – in WHO’s Vaccines Explained series.</p>
+      
+    </div>
+  </div>
+  <div class="rightcolumn">
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+<div class="footer">
+  <h2></h2>
+</div>
+
+
+
+
+
+</body>
+</html>
+
